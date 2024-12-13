@@ -1,0 +1,64 @@
+<header class="bg-primary text-white py-3">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div class="logo d-flex align-items-center">
+      <img
+        src="../img/logo.png"
+        alt="Logo Báo Giấy"
+        class="me-2"
+        style="width: 50px; height: 50px"
+      />
+      <h1 class="h4 mb-0">Báo Giấy Online</h1>
+    </div>
+    <form class="d-flex me-3">
+      <input
+        class="form-control me-2"
+        type="search"
+        placeholder="Tìm kiếm bài báo..."
+        aria-label="Search"
+      />
+    </form>
+    <nav>
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="index.html">Trang chủ</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="gioithieu.html">Giới thiệu</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="danhmucbaogiay.html"
+            >Danh mục báo</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="giohang.html">Giỏ Hàng</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="thanhtoan.html">Thanh Toán</a>
+        </li>
+        <li class="nav-item">
+          <span id="usernameDisplay" class="text-white ms-2"></span>
+          <a href="login.html" id="loginButton" class="btn btn-light"
+            >Đăng nhập</a
+          >
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script>
+  (function () {
+    // Kiểm tra trạng thái đăng nhập
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    const username = localStorage.getItem("username");
+
+    if (isLoggedIn && username) {
+      // Hiển thị tên người dùng và ẩn nút đăng nhập
+      document.getElementById(
+        "usernameDisplay"
+      ).textContent = `Xin chào, ${username}`;
+      document.getElementById("loginButton").style.display = "none";
+    }
+  })();
+</script>

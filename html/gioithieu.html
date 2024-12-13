@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giới Thiệu - Báo Giấy Online</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+  </head>
+
+  <body>
+    <header class="bg-primary text-white py-3">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo d-flex align-items-center">
+          <img
+            src="../img/logo.png"
+            alt="Logo Báo Giấy"
+            class="me-2 rounded-circle"
+            style="width: 50px; height: 50px"
+          />
+          <h1 class="h4 mb-0">Báo Giấy Online</h1>
+        </div>
+        <form class="d-flex me-3">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Tìm kiếm bài báo..."
+            aria-label="Search"
+          />
+        </form>
+        <nav>
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="index.html">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="gioithieu.html"
+                >Giới thiệu</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="danhmucbaogiay.html"
+                >Danh mục báo</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="giohang.html">Giỏ Hàng</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="thanhtoan.html"
+                >Thanh Toán</a
+              >
+            </li>
+            <li class="nav-item">
+              <span id="usernameDisplay" class="text-white ms-2"></span>
+              <a href="login.html" id="loginButton" class="btn btn-light"
+                >Đăng nhập</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+      <section class="about">
+        <h2 class="text-center mb-4">Giới Thiệu về Báo Giấy Online</h2>
+        <p>
+          Báo Giấy Online là một nền tảng cung cấp các loại báo giấy chất lượng
+          cao đến tay người đọc một cách thuận tiện và nhanh chóng. Chúng tôi
+          mang đến các loại báo đa dạng về các lĩnh vực như Thể Thao, Kinh Tế,
+          Văn Hóa và Tin Tức, nhằm phục vụ nhu cầu đọc báo của độc giả trên khắp
+          cả nước.
+        </p>
+        <p>
+          Trang web được xây dựng với mục tiêu giúp người dùng có thể dễ dàng
+          tìm kiếm, đăng ký và đặt mua các ấn phẩm báo giấy yêu thích một cách
+          nhanh chóng và tiện lợi.
+        </p>
+      </section>
+
+      <hr class="my-5" />
+
+      <!-- Thông Tin Thành Viên Thực Hiện -->
+      <section class="team">
+        <div class="container mt-5">
+          <h3 class="mb-4">Bài Viết Nổi Bật</h3>
+          <div class="row">
+            <!-- Bài viết 1 -->
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <img
+                  src="../img/ai-dreamstime-5074.jpg"
+                  class="card-img-top"
+                  alt="Trí tuệ nhân tạo"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Công Nghệ Mới: Trí Tuệ Nhân Tạo Đang Thay Đổi Thế Giới
+                  </h5>
+                  <p class="card-text">
+                    Trí tuệ nhân tạo (AI) đang ngày càng trở thành một phần
+                    không thể thiếu trong mọi lĩnh vực từ y tế, giáo dục đến
+                    công nghiệp...
+                  </p>
+                  <a href="#article1" class="btn btn-primary">Đọc thêm</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bài viết 2 -->
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <img
+                  src="../img/tri tue.jpg"
+                  class="card-img-top"
+                  alt="Blockchain"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Blockchain: Tương Lai Của Ngành Tài Chính
+                  </h5>
+                  <p class="card-text">
+                    Blockchain đang tạo ra sự thay đổi lớn trong ngành tài
+                    chính, giúp cải thiện tính bảo mật và giảm chi phí giao
+                    dịch...
+                  </p>
+                  <a href="#article2" class="btn btn-primary">Đọc thêm</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bài viết 3 -->
+            <div class="col-md-4">
+              <div class="card mb-4">
+                <img
+                  src="../img/tp.jpg"
+                  class="card-img-top"
+                  alt="Thành phố thông minh"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">
+                    Các Thành Phố Thông Minh Và Tương Lai Của Đô Thị
+                  </h5>
+                  <p class="card-text">
+                    Các thành phố thông minh đang trở thành xu hướng mới trong
+                    việc quản lý đô thị, với các giải pháp công nghệ giúp cải
+                    thiện đời sống cư dân...
+                  </p>
+                  <a href="#article3" class="btn btn-primary">Đọc thêm</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Phần chi tiết bài viết -->
+        <div class="container mt-5" id="article1">
+          <div class="row">
+            <div class="col-md-8">
+              <h1 class="display-4">
+                Công Nghệ Mới: Trí Tuệ Nhân Tạo Đang Thay Đổi Thế Giới
+              </h1>
+              <img
+                src="../img/tritue.jfif"
+                width="100%"
+                class="img-fluid mb-4"
+                alt="Trí tuệ nhân tạo"
+              />
+              <p class="lead">
+                Trí tuệ nhân tạo (AI) đang ngày càng trở thành một phần không
+                thể thiếu trong mọi lĩnh vực từ y tế, giáo dục đến công
+                nghiệp...
+              </p>
+              <p>
+                AI không chỉ giúp giải quyết các vấn đề phức tạp mà còn hỗ trợ
+                con người trong việc tối ưu hóa công việc và đưa ra quyết định
+                chính xác hơn. Các ứng dụng AI đã xuất hiện trong nhiều ngành
+                nghề và cuộc sống hàng ngày của chúng ta, từ trợ lý ảo đến các
+                hệ thống dự báo trong kinh doanh.
+              </p>
+              <h3>Ứng dụng của AI trong đời sống</h3>
+              <p>
+                Trí tuệ nhân tạo không chỉ xuất hiện trong các thiết bị điện tử
+                mà còn đang được ứng dụng rộng rãi trong các lĩnh vực khác như y
+                tế, giáo dục, và giao thông...
+              </p>
+            </div>
+
+            <!-- Sidebar (Bài viết liên quan) -->
+            <div class="col-md-4">
+              <div class="card">
+                <div class="card-header">
+                  <h5>Bài Viết Liên Quan</h5>
+                </div>
+                <div class="card-body">
+                  <ul class="list-unstyled">
+                    <li><a href="#article2">Tương Lai Của Blockchain</a></li>
+                    <li>
+                      <a href="#article3">Trí Tuệ Nhân Tạo Trong Ngành Y Tế</a>
+                    </li>
+                    <li>
+                      <a href="#article3"
+                        >Các Ứng Dụng Của IoT Trong Nhà Thông Minh</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white py-4 text-center mt-auto shadow-lg">
+      <div class="container">
+        <p>Bản quyền © 2024 Báo Giấy Online</p>
+        <div class="social-links">
+          <a href="#" class="text-white mx-2">Facebook</a>
+          <a href="#" class="text-white mx-2">Twitter</a>
+          <a href="#" class="text-white mx-2">Instagram</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript để nhúng header và footer -->
+    <script>
+      // Tải header và footer
+
+      (function () {
+        // Kiểm tra trạng thái đăng nhập
+        const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+        const username = localStorage.getItem("username");
+
+        if (isLoggedIn && username) {
+          // Hiển thị tên người dùng và ẩn nút đăng nhập
+          document.getElementById(
+            "usernameDisplay"
+          ).textContent = `Xin chào, ${username}`;
+          document.getElementById("loginButton").style.display = "none";
+        }
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Giỏ Hàng - Báo Giấy Online</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="bg-primary text-white py-3 shadow sticky-top">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo d-flex align-items-center">
+          <img
+            src="../img/logo.png"
+            alt="Logo Báo Giấy"
+            class="me-2 rounded-circle"
+            style="width: 50px; height: 50px"
+          />
+          <h1 class="h4 mb-0">Báo Giấy Online</h1>
+        </div>
+        <form class="d-flex me-3">
+          <input
+            class="form-control me-2 rounded-pill"
+            type="search"
+            placeholder="Tìm kiếm bài báo..."
+            aria-label="Search"
+          />
+        </form>
+        <nav>
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="index.html">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="gioithieu.html"
+                >Giới thiệu</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="danhmucbaogiay.html"
+                >Danh mục báo</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="giohang.html">Giỏ Hàng</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="thanhtoan.html"
+                >Thanh Toán</a
+              >
+            </li>
+            <li class="nav-item">
+              <span id="usernameDisplay" class="text-white ms-2"></span>
+              <a href="login.html" id="loginButton" class="btn btn-light"
+                >Đăng nhập</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+      <h1 class="text-center mb-4 text-primary fw-bold">Giỏ Hàng</h1>
+      <div class="table-responsive">
+        <table
+          class="table table-hover table-bordered shadow-sm"
+          id="cartTable"
+        >
+          <thead class="table-primary">
+            <tr>
+              <th>Sản phẩm</th>
+              <th class="text-center">Số lượng</th>
+              <th class="text-center">Đơn giá</th>
+              <th class="text-center">Tổng giá</th>
+              <th class="text-center">Xóa</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+          <tfoot>
+            <tr>
+              <th colspan="3" class="text-end">Tổng cộng:</th>
+              <th id="totalPrice" class="text-primary fw-bold">0 VND</th>
+              <th></th>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+      <a
+        href="thanhtoan.html"
+        class="btn btn-success w-100 rounded-pill mt-3 fw-bold"
+        onclick="saveCartData()"
+        >Tiến Hành Thanh Toán</a
+      >
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 text-center mt-auto shadow-lg">
+      <div class="container">
+        <p>Bản quyền © 2023 Báo Giấy Online</p>
+        <div class="social-links">
+          <a href="#" class="text-white mx-2">Facebook</a>
+          <a href="#" class="text-white mx-2">Twitter</a>
+          <a href="#" class="text-white mx-2">Instagram</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Hiển thị giỏ hàng
+      function displayCart() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        const cartTable = document
+          .getElementById("cartTable")
+          .getElementsByTagName("tbody")[0];
+        cartTable.innerHTML = "";
+        let totalPrice = 0;
+
+        cart.forEach((item, index) => {
+          const row = cartTable.insertRow();
+          row.insertCell(0).textContent = item.name;
+          row.insertCell(1).textContent = item.quantity;
+          row.insertCell(2).textContent = item.price + " VND";
+          row.insertCell(3).textContent = item.price * item.quantity + " VND";
+
+          const deleteButton = document.createElement("button");
+          deleteButton.className = "btn btn-danger btn-sm rounded-pill";
+          deleteButton.textContent = "Xóa";
+          deleteButton.onclick = function () {
+            removeFromCart(index);
+          };
+          row.insertCell(4).appendChild(deleteButton);
+
+          totalPrice += item.price * item.quantity;
+        });
+
+        document.getElementById("totalPrice").textContent = totalPrice + " VND";
+      }
+
+      // Xóa sản phẩm khỏi giỏ hàng theo chỉ số
+      function removeFromCart(index) {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        cart.splice(index, 1);
+        localStorage.setItem("cart", JSON.stringify(cart));
+        displayCart();
+      }
+
+      // Lưu giỏ hàng cho trang thanh toán
+      function saveCartData() {
+        const cart = JSON.parse(localStorage.getItem("cart")) || [];
+        localStorage.setItem("checkoutCart", JSON.stringify(cart));
+      }
+
+      document.addEventListener("DOMContentLoaded", function () {
+        loadHTML("header", "header.html");
+        loadHTML("footer", "footer.html");
+        displayCart();
+      });
+
+      function loadHTML(elementId, url) {
+        fetch(url)
+          .then((response) => response.text())
+          .then(
+            (data) => (document.getElementById(elementId).innerHTML = data)
+          );
+      }
+    </script>
+    <script>
+      (function () {
+        const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+        const username = localStorage.getItem("username");
+
+        if (isLoggedIn && username) {
+          document.getElementById(
+            "usernameDisplay"
+          ).textContent = `Xin chào, ${username}`;
+          document.getElementById("loginButton").style.display = "none";
+        }
+      })();
+    </script>
+  </body>
+</html>

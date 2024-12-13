@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Danh mục Báo Giấy - Báo Giấy Online</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="bg-primary text-white py-3 shadow sticky-top">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo d-flex align-items-center">
+          <img
+            src="../img/logo.png"
+            alt="Logo Báo Giấy"
+            class="me-2 rounded-circle"
+            style="width: 50px; height: 50px"
+          />
+          <h1 class="h4 mb-0">Báo Giấy Online</h1>
+        </div>
+        <form class="d-flex me-3 search-form">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Tìm kiếm bài báo..."
+            aria-label="Search"
+          />
+        </form>
+        <nav>
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="index.html">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="gioithieu.html"
+                >Giới thiệu</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="danhmucbaogiay.html"
+                >Danh mục báo</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="giohang.html">Giỏ Hàng</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="thanhtoan.html"
+                >Thanh Toán</a
+              >
+            </li>
+            <li class="nav-item">
+              <span id="usernameDisplay" class="text-white ms-2"></span>
+              <a href="login.html" id="loginButton" class="btn btn-light"
+                >Đăng nhập</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Danh mục Sản phẩm và Tin tức -->
+    <main class="container my-4">
+      <ul class="nav nav-tabs" id="productTab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link active"
+            id="news-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#news"
+            type="button"
+            role="tab"
+            aria-controls="news"
+            aria-selected="true"
+          >
+            Kinh doanh
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="sports-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#sports"
+            type="button"
+            role="tab"
+            aria-controls="sports"
+            aria-selected="false"
+          >
+            Thể Thao
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="economics-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#economics"
+            type="button"
+            role="tab"
+            aria-controls="economics"
+            aria-selected="false"
+          >
+            Du lịch
+          </button>
+        </li>
+        <li class="nav-item" role="presentation">
+          <button
+            class="nav-link"
+            id="culture-tab"
+            data-bs-toggle="tab"
+            data-bs-target="#culture"
+            type="button"
+            role="tab"
+            aria-controls="culture"
+            aria-selected="false"
+          >
+            Sức khỏe
+          </button>
+        </li>
+      </ul>
+
+      <div class="tab-content" id="productTabContent">
+        <!-- kinh doanh Tab -->
+        <div
+          class="tab-pane fade show active"
+          id="news"
+          role="tabpanel"
+          aria-labelledby="news-tab"
+        >
+          <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+            <!-- Card kinh doanh -->
+            <div class="col">
+              <div class="product-card shadow-sm">
+                <img
+                  src="../img/kinh doanh.jfif"
+                  alt="Tin Tức 1"
+                  class="card-img-top rounded-top"
+                />
+                <div class="product-card-body p-3">
+                  <h5 class="card-title">
+                    Khởi động dự án nâng cao năng lực cho FiinRatings
+                  </h5>
+                  <p class="card-text">
+                    Chương trình tập trung vào hỗ trợ FiinRatings nâng cao năng
+                    lực chuyên môn cho hoạt động xếp hạng tín nhiệm tổ chức tài
+                    chính...
+                  </p>
+                  <a href="chitiettintuc.html" class="btn btn-primary w-100"
+                    >Đọc thêm</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="product-card shadow-sm">
+                <img
+                  src="../img/kd2.jpg"
+                  alt="Tin Tức 2"
+                  class="card-img-top rounded-top"
+                />
+                <div class="product-card-body p-3">
+                  <h5 class="card-title">
+                    Thống đốc: Ngân hàng muốn cho vay nhưng không biết 'thế nào
+                    là xanh'
+                  </h5>
+                  <p class="card-text">
+                    Thống đốc Ngân hàng Nhà nước nói luôn khuyến khích nhà băng
+                    cấp tín dụng xanh nhưng phân khúc này còn nhiều vướng mắc
+                    khi thiếu hướng dẫn về phân loại danh mục xanh...
+                  </p>
+                  <a href="chitiettintuc.html" class="btn btn-primary w-100"
+                    >Đọc thêm</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="product-card shadow-sm">
+                <img
+                  src="../img/kd3.jpg"
+                  alt="Tin Tức 3"
+                  class="card-img-top rounded-top"
+                />
+                <div class="product-card-body p-3">
+                  <h5 class="card-title">Giá vàng thế giới lao dốc</h5>
+                  <p class="card-text">
+                    Giá vàng thế giới giao ngay giảm hơn 64 USD xuống 2.619 USD.
+                    Trong phiên, giá có lúc xuống 2.610 USD.Dollar Index hôm qua
+                    tăng 0,5% lên cao nhất kể từ đầu tháng 7. Tuần trước, chỉ số
+                    này tăng gần 2% lên 105,4 điểm, sau khi Trump được xác nhận
+                    đắc cử.
+                  </p>
+                  <a href="chitiettintuc.html" class="btn btn-primary w-100"
+                    >Đọc thêm</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="product-card shadow-sm">
+                <img
+                  src="../img/kd4.jpg"
+                  alt="Tin Tức 4"
+                  class="card-img-top rounded-top"
+                />
+                <div class="product-card-body p-3">
+                  <h5 class="card-title">
+                    Cổ phiếu ngân hàng tiếp tục giảm sâu
+                  </h5>
+                  <p class="card-text">
+                    Chứng khoán hôm nay chỉ kịp đạt sắc xanh vài phút đầu giao
+                    dịch, sau đó đi dưới tham chiếu cho đến cuối phiên. Nửa đầu
+                    buổi sáng, chỉ số của sàn HoSE giảm không quá sâu khi lực
+                    mua và bán vẫn giằng co và thanh khoản nhỏ giọt...
+                  </p>
+                  <a href="chitiettintuc.html" class="btn btn-primary w-100"
+                    >Đọc thêm</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="product-card shadow-sm">
+                <img
+                  src="../img/kd5.jpg"
+                  alt="Tin Tức 4"
+                  class="card-img-top rounded-top"
+                />
+                <div class="product-card-body p-3">
+                  <h5 class="card-title">
+                    Vì sao Bitcoin liên tiếp lập kỷ lục?
+                  </h5>
+                  <p class="card-text">
+                    Sau khi vọt lên 80.000 USD một đồng tối 10/11 (giờ Hà Nội),
+                    Bitcoin (BTC) lập thêm kỷ lục mới vào cuối buổi sáng nay với
+                    hơn 81.858 USD. Như vậy từ khi Donald Trump được xác định là
+                    ứng cử viên chiến thắng trong cuộc đua vào Nhà Trắng, BTC
+                    lập mặt bằng giá mới mỗi ngày...
+                  </p>
+                  <a href="chitiettintuc.html" class="btn btn-primary w-100"
+                    >Đọc thêm</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="product-card shadow-sm">
+                <img
+                  src="../img/kd6.jpg"
+                  alt="Tin Tức 4"
+                  class="card-img-top rounded-top"
+                />
+                <div class="product-card-body p-3">
+                  <h5 class="card-title">Giá vàng dự báo tiếp tục giảm</h5>
+                  <p class="card-text">
+                    Thị trường tài chính tuần qua chịu ảnh hưởng từ cuộc bầu cử
+                    tổng thống Mỹ và kim loại quý cũng không ngoại lệ. Sau khi
+                    chạm mốc 2.700 USD mỗi ounce, các đợt bán tháo khi ông Trump
+                    đắc cử khiến vàng khép tuần ở mức 2.684 USD mỗi ounce...
+                  </p>
+                  <a href="chitiettintuc.html" class="btn btn-primary w-100"
+                    >Đọc thêm</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Thể Thao Tab -->
+        <div
+          class="tab-pane fade"
+          id="sports"
+          role="tabpanel"
+          aria-labelledby="sports-tab"
+        >
+          <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+            <!-- Card Thể Thao -->
+            <div class="col">
+              <div class="product-card shadow-sm">
+                <img
+                  src="../img/thể thao.jpg"
+                  alt="Thể Thao 1"
+                  class="card-img-top rounded-top"
+                />
+                <div class="product-card-body p-3">
+                  <h5 class="card-title">
+                    Đối thủ của tuyển Việt Nam tại AFF Cup 2024: Tham vọng
+                    Philippines
+                  </h5>
+                  <p class="card-text">
+                    AFF Cup 2024 đang đến gần, khi tuyển Việt Nam sẽ có trận ra
+                    quân vào 9/12. Đội bóng của HLV Kim Sang Sik nằm ở bảng B
+                    cùng Indonesia, Philippines, Myanmar và Lào. Trước khi bước
+                    vào giải đấu này, hãy cùng Thể Thao VietNamNet tìm hiểu về
+                    các đối thủ của tuyển Việt Nam...
+                  </p>
+                  <a href="chitiettintuc.html" class="btn btn-primary w-100"
+                    >Đọc thêm</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="product-card shadow-sm">
+                <img
+                  src="../img/tt1.jpg"
+                  alt="Thể Thao 2"
+                  class="card-img-top rounded-top"
+                />
+                <div class="product-card-body p-3">
+                  <h5 class="card-title">
+                    Lý do thực sự Mbappe bị loại khỏi tuyển Pháp, Real Madrid
+                    thêm sầu
+                  </h5>
+                  <p class="card-text">
+                    Mbappe trong vai trò đội trưởng, lần thứ 2 liên tiếp bị loại
+                    ở ĐTQG Pháp gây nên bàn tán và thất vọng lớn. Nếu ở kỳ FIFA
+                    Days tháng 10, lý do là để anh hồi phục hoàn toàn chấn
+                    thương (dù thực tế vẫn ra sân chơi cho Real Madrid), thì lần
+                    này bởi phong độ...
+                  </p>
+                  <a href="chitiettintuc.html" class="btn btn-primary w-100"
+                    >Đọc thêm</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="product-card shadow-sm">
+                <img
+                  src="../img/tt2.jpg"
+                  alt="Thể Thao 3"
+                  class="card-img-top rounded-top"
+                />
+                <div class="product-card-body p-3">
+                  <h5 class="card-title">
+                    Tấn công như đá tập, Nam Định thắng đậm CLB TP.HCM
+                  </h5>
+                  <p class="card-text">
+                    Thép Xanh Nam Định trong ngày thiếu vắng Xuân Son và Hendrio
+                    vẫn dễ dàng đánh bại CLB TP.HCM với tỷ số 3-0, ở trận đấu
+                    muộn nhất vòng 7 LPBank V-League...
+                  </p>
+                  <a href="chitiettintuc.html" class="btn btn-primary w-100"
+                    >Đọc thêm</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Du lịch tab-->
+        <div
+          class="tab-pane fade"
+          id="economics"
+          role="tabpanel"
+          aria-labelledby="economics-tab"
+        >
+          <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+            <!-- Card du lịch -->
+            <div class="col">
+              <div class="product-card shadow-sm">
+                <img
+                  src="../img/du lịch.jpg"
+                  alt="Thể Thao 1"
+                  class="card-img-top rounded-top"
+                />
+                <div class="product-card-body p-3">
+                  <h5 class="card-title">
+                    Chàng trai đi khắp Việt Nam chụp ảnh bò sát
+                  </h5>
+                  <p class="card-text">
+                    Nguyễn Minh Phú, 20 tuổi, sống tại TP HCM, đồng sáng lập
+                    nhóm cứu hộ rắn Viet Snake Rescuer, đam mê đi rừng và khám
+                    phá, chụp ảnh các loài bò sát lưỡng cư. Năm lớp 9, Phú tập
+                    nuôi rắn nước và nhận ra con rắn của mình không đẹp như
+                    trong những bức hình chụp ngoài tự nhiên...
+                  </p>
+                  <a href="chitiettintuc.html" class="btn btn-primary w-100"
+                    >Đọc thêm</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="product-card shadow-sm">
+                <img
+                  src="../img/dl1.jpg"
+                  alt="Thể Thao 2"
+                  class="card-img-top rounded-top"
+                />
+                <div class="product-card-body p-3">
+                  <h5 class="card-title">
+                    Đua xuồng ba lá, trình diễn drone tại Tuần du lịch Long An
+                  </h5>
+                  <p class="card-text">
+                    Tuần Văn hóa - Thể thao - Du lịch Long An sẽ có các hoạt
+                    động âm nhạc, ẩm thực, biểu diễn drone, đua xuồng ba lá, dự
+                    kiến thu hút khoảng một triệu lượt khách. Tuần Văn hóa - Thể
+                    thao - Du lịch Long An lần thứ 2 diễn ra từ 28/11 đến 4/12
+                    với chủ đề "Long An - Khát vọng sông Vàm"...
+                  </p>
+                  <a href="chitiettintuc.html" class="btn btn-primary w-100"
+                    >Đọc thêm</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="product-card shadow-sm">
+                <img
+                  src="../img/dl2.jpg"
+                  alt="Thể Thao 3"
+                  class="card-img-top rounded-top"
+                />
+                <div class="product-card-body p-3">
+                  <h5 class="card-title">
+                    Bảo tàng Lịch sử Quân sự đông nghịt khách ngày mở cửa
+                  </h5>
+                  <p class="card-text">
+                    Bảo tàng Lịch sử Quân sự Việt Nam mở cửa miễn phí phục vụ
+                    khách tham quan tại địa điểm mới Km 6+500 Đại Lộ Thăng Long,
+                    thuộc hai phường Tây Mỗ, Đại Mỗ, quận Nam Từ Liêm, từ sáng
+                    1/11. Bảo tàng được Bộ Quốc phòng đầu tư xây dựng từ năm
+                    2019 trên diện tích 386.600 m2, nổi bật với tòa tháp Chiến
+                    thắng cao 45 m ở sân trước. Khối nhà chính có 4 tầng nổi,
+                    một tầng trệt...
+                  </p>
+                  <a href="chitiettintuc.html" class="btn btn-primary w-100"
+                    >Đọc thêm</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Sức khỏe tab-->
+        <div
+          class="tab-pane fade"
+          id="culture"
+          role="tabpanel"
+          aria-labelledby="culture-tab"
+        >
+          <div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+            <!-- Card sức khỏe -->
+            <div class="col">
+              <div class="product-card shadow-sm">
+                <img
+                  src="../img/sức khỏe.jpg"
+                  alt="Thể Thao 1"
+                  class="card-img-top rounded-top"
+                />
+                <div class="product-card-body p-3">
+                  <h5 class="card-title">
+                    Bác sĩ, điều dưỡng Long Châu tham gia khóa cấp cứu phản vệ
+                  </h5>
+                  <p class="card-text">
+                    Xác định "Sức khỏe khách hàng là kim chỉ nam", FPT Long Châu
+                    đẩy mạnh đào tạo đội ngũ của mình, hướng đến mục tiêu kép:
+                    đảm bảo an toàn cho người dân, đồng thời trở thành "cánh tay
+                    nối dài" của ngành y, phục vụ cộng đồng...
+                  </p>
+                  <a href="chitiettintuc.html" class="btn btn-primary w-100"
+                    >Đọc thêm</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="product-card shadow-sm">
+                <img
+                  src="../img/sk1.jpg"
+                  alt="Thể Thao 2"
+                  class="card-img-top rounded-top"
+                />
+                <div class="product-card-body p-3">
+                  <h5 class="card-title">
+                    Dùng túi nilong đựng bún, phở nóng có gây hại?
+                  </h5>
+                  <p class="card-text">
+                    Thói quen sử dụng túi nilong để đựng đồ ăn khá phổ biến
+                    trong cộng đồng, song hầu hết mọi người đều không quan tâm
+                    đến chất liệu của túi nilon là gì, được sản xuất ra sao mà
+                    chỉ quan tâm đến mức độ tiết kiệm, tiện lợi của nó mang
+                    lại...
+                  </p>
+                  <a href="chitiettintuc.html" class="btn btn-primary w-100"
+                    >Đọc thêm</a
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="product-card shadow-sm">
+                <img
+                  src="../img/sk2.jpg"
+                  alt="Thể Thao 3"
+                  class="card-img-top rounded-top"
+                />
+                <div class="product-card-body p-3">
+                  <h5 class="card-title">
+                    Công thức 10-3-2-1-0 giúp giấc ngủ ngon
+                  </h5>
+                  <p class="card-text">
+                    Nghiên cứu cho thấy, giấc ngủ rất quan trọng đối với sức
+                    khỏe. Thiếu ngủ có thể gây bệnh tiểu đường, tim mạch, suy
+                    giảm nhận thức, suy giảm miễn dịch, tăng nguy cơ trầm cảm,
+                    lo lắng cùng các vấn đề sức khỏe mạn tính khác...
+                  </p>
+                  <a href="chitiettintuc.html" class="btn btn-primary w-100"
+                    >Đọc thêm</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 text-center mt-auto shadow-lg">
+      <div class="container">
+        <p>Bản quyền © 2024 Báo Giấy Online</p>
+        <div class="social-links">
+          <a href="#" class="text-white mx-2">Facebook</a>
+          <a href="#" class="text-white mx-2">Twitter</a>
+          <a href="#" class="text-white mx-2">Instagram</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      (function () {
+        const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+        const username = localStorage.getItem("username");
+
+        if (isLoggedIn && username) {
+          document.getElementById(
+            "usernameDisplay"
+          ).textContent = `Xin chào, ${username}`;
+          document.getElementById("loginButton").style.display = "none";
+        }
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trang Chủ - Giới thiệu Báo Giấy</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/jquery-3.7.1.min.js"></script>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header class="bg-primary text-white py-3">
+      <div class="container d-flex justify-content-between align-items-center">
+        <div class="logo d-flex align-items-center">
+          <img
+            src="../img/logo.png"
+            alt="Logo Báo Giấy"
+            class="me-2 rounded-circle"
+            style="width: 50px; height: 50px"
+          />
+          <h1 class="h4 mb-0">Báo Giấy Online</h1>
+        </div>
+        <form class="d-flex me-3">
+          <input
+            class="form-control me-2"
+            type="search"
+            placeholder="Tìm kiếm bài báo..."
+            aria-label="Search"
+          />
+        </form>
+        <nav>
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link text-white" href="index.html">Trang chủ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="gioithieu.html"
+                >Giới thiệu</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="danhmucbaogiay.html"
+                >Danh mục báo</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="giohang.html">Giỏ Hàng</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="thanhtoan.html"
+                >Thanh Toán</a
+              >
+            </li>
+            <li class="nav-item">
+              <span id="usernameDisplay" class="text-white ms-2"></span>
+              <a href="login.html" id="loginButton" class="btn btn-light"
+                >Đăng nhập</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <!-- Main Content -->
+    <main class="container my-5">
+      <!-- Phần giới thiệu -->
+      <section class="intro text-center mb-5">
+        <h2 class="display-6 text-primary mb-3">
+          Chào mừng đến với Báo Giấy Online
+        </h2>
+        <p class="lead">
+          Khám phá thế giới báo giấy với các ấn phẩm phong phú, chất lượng cao.
+          Đăng ký và đặt mua báo nhanh chóng, dễ dàng!
+        </p>
+      </section>
+
+      <!-- Phần danh sách bài báo -->
+      <section class="news-grid">
+        <!-- Carousel Section -->
+        <section class="container my-5">
+          <div
+            id="newsCarousel"
+            class="carousel slide mb-5"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="../img/img1.png"
+                  class="d-block w-100"
+                  alt="Hình ảnh 1"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Báo mới</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../img/img2.jpg"
+                  class="d-block w-100"
+                  alt="Hình ảnh 2"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Báo mới</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../img/báo3.jfif"
+                  class="d-block w-100"
+                  alt="Hình ảnh 3"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Báo mới</h5>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#newsCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#newsCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+          <div
+            id="newsCarousel"
+            class="carousel slide mb-5"
+            data-bs-ride="carousel"
+          >
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img
+                  src="../img/báo.jfif"
+                  class="d-block w-100"
+                  alt="Hình ảnh 1"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Báo mới</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../img/báo2.jfif"
+                  class="d-block w-100"
+                  alt="Hình ảnh 2"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Báo mới</h5>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <img
+                  src="../img/báo3.jfif"
+                  class="d-block w-100"
+                  alt="Hình ảnh 3"
+                />
+                <div class="carousel-caption d-none d-md-block">
+                  <h5>Báo mới</h5>
+                </div>
+              </div>
+            </div>
+            <button
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#newsCarousel"
+              data-bs-slide="prev"
+            >
+              <span
+                class="carousel-control-prev-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#newsCarousel"
+              data-bs-slide="next"
+            >
+              <span
+                class="carousel-control-next-icon"
+                aria-hidden="true"
+              ></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        </section>
+
+        <div class="row row-cols-3 row-cols-md-3 g-4">
+          <!-- Bài báo 1 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+              <img
+                src="../img/img.jpg"
+                class="card-img-top rounded"
+                alt="Bài báo 1"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary">
+                  Hà Nội đổi giờ học, giờ làm
+                </h5>
+                <p class="card-text">
+                  Thành phố Hà Nội cho hay, trên 70% người dân được lấy ý kiến
+                  ủng hộ điều chỉnh giờ học, giờ làm để giảm ùn tắc giao
+                  thông...
+                </p>
+                <a href="docthem.html" class="btn btn-primary mt-auto"
+                  >Đọc thêm</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Bài báo 2 -->
+          <div class="col">
+            <div class="card h-300 shadow-sm border-0">
+              <img
+                src="../img/chính trị.jfif"
+                class="card-img-top rounded"
+                alt="Bài báo 2"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary">
+                  Mạng xã hội đã đóng thuế 20.000 tỷ đồng
+                </h5>
+                <p class="card-text">
+                  Bộ trưởng Thông tin và Truyền thông Nguyễn Mạnh Hùng cho biết
+                  các mạng xã hội đã đóng thuế ở Việt Nam được 2,5 năm, với hơn
+                  20.000 tỷ đồng...
+                </p>
+                <a href="docthem.html" class="btn btn-primary mt-auto"
+                  >Đọc thêm</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Bài báo 3 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+              <img
+                src="../img/bds.jfif"
+                class="card-img-top rounded"
+                alt="Bài báo 3"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary">
+                  Đất trúng đấu giá sắp ngang biệt thự, liền kề
+                </h5>
+                <p class="card-text">
+                  Một số lô trúng đấu giá tại Hoài Đức, Hà Đông lên đến 15-16 tỷ
+                  đồng, cạnh tranh với biệt thự, liền kề chuyển nhượng cùng khu
+                  vực...
+                </p>
+                <a href="docthem.html" class="btn btn-primary mt-auto"
+                  >Đọc thêm</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Bài báo 4 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+              <img
+                src="../img/giải trí.jfif"
+                class="card-img-top rounded"
+                alt="Bài báo 4"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary">
+                  Sự nghiệp của Beyoncé thành chủ đề giảng dạy bậc đại học
+                </h5>
+                <p class="card-text">
+                  Sự nghiệp âm nhạc và sức ảnh hưởng của ca sĩ Beyoncé đến văn
+                  hóa đại chúng sẽ trở thành đề tài giảng dạy của Đại học Yale
+                  năm 2025...
+                </p>
+                <a href="docthem.html" class="btn btn-primary mt-auto"
+                  >Đọc thêm</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Bài báo 5 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+              <img
+                src="../img/pháp luật.jfif"
+                class="card-img-top rounded"
+                alt="Bài báo 4"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary">
+                  VKS bất ngờ thẩm vấn bà Trương Mỹ Lan về phương án khắc phục
+                  677.000 tỷ đồng
+                </h5>
+                <p class="card-text">
+                  TP HCMVKS dự kiến nêu quan điểm giải quyết đơn xin giảm án tử
+                  hình của bà Trương Mỹ Lan và nhiều nội dung khác, song bất ngờ
+                  quay lại phần thẩm vấn...
+                </p>
+                <a href="docthem.html" class="btn btn-primary mt-auto"
+                  >Đọc thêm</a
+                >
+              </div>
+            </div>
+          </div>
+          <!-- Bài báo 6 -->
+          <div class="col">
+            <div class="card h-100 shadow-sm border-0">
+              <img
+                src="../img/bão.jfif"
+                class="card-img-top rounded"
+                alt="Bài báo 4"
+                style="height: 200px; object-fit: cover"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title text-primary">
+                  Khả năng xuất hiện 1-2 cơn bão, áp thấp nhiệt đới ảnh hưởng
+                  tới đất liền trong tháng 10
+                </h5>
+                <p class="card-text">
+                  trong tháng 10-2024, khả năng xuất hiện 1-2 cơn bão, áp thấp
+                  nhiệt đới và có thể ảnh hưởng đến khu vực đất liền nước ta...
+                </p>
+                <a href="docthem.html" class="btn btn-primary mt-auto"
+                  >Đọc thêm</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 text-center mt-auto shadow-lg">
+      <div class="container">
+        <p>Bản quyền © 2024 Báo Giấy Online</p>
+        <div class="social-links">
+          <a href="#" class="text-white mx-2">Facebook</a>
+          <a href="#" class="text-white mx-2">Twitter</a>
+          <a href="#" class="text-white mx-2">Instagram</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      async function loadContent() {
+        const headerResponse = await fetch("header.html");
+        const headerContent = await headerResponse.text();
+        document.getElementById("header").innerHTML = headerContent;
+
+        const footerResponse = await fetch("footer.html");
+        const footerContent = await footerResponse.text();
+        document.getElementById("footer").innerHTML = footerContent;
+      }
+
+      document.addEventListener("DOMContentLoaded", loadContent);
+      (function () {
+        // Kiểm tra trạng thái đăng nhập
+        const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+        const username = localStorage.getItem("username");
+
+        if (isLoggedIn && username) {
+          // Hiển thị tên người dùng và ẩn nút đăng nhập
+          document.getElementById(
+            "usernameDisplay"
+          ).textContent = `Xin chào, ${username}`;
+          document.getElementById("loginButton").style.display = "none";
+        }
+      })();
+    </script>
+  </body>
+</html>
